@@ -1,100 +1,175 @@
-.dycalender {
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    border-radius: 20px;
-    padding-bottom: 25px;
-    box-shadow: rgba(0, 0, 0, 0.2)0px 12px 28px 0px,
-        rgba(0, 0, 0, 0.1)0px 2px 4px 0px,
-        rgba(255, 255, 255, 0.05)0px 0px 0px 1px inset;
+/*CodingMaker_*/
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f5f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.dycalender table {
-    margin: 30px 20px 10px 10px;
+.dycalendar {
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  padding-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
-.dycalender table tr:first-child td {
-    color: grey;
+.dycalendar table {
+  margin: 30px 20px 10px 10px;
 }
 
-.dycalender table td {
-    height: 55px;
-    width: 55px;
-    border-radius: 5px;
-    font-size: 25px;
-    cursor: pointer;
-    position: relative;
-    top: 10px;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+.dycalendar table tr:first-child td {
+  color: grey;
 }
 
-.dycalender table td:hover {
-    background: rgba(192, 192, 192, 0.3);
-    transition: all .2s ease-out;
+.dycalendar table td {
+  height: 55px;
+  width: 55px;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  font-family: "Pretendard Variable", sans-serif;
+}
+
+.dycalendar table td:hover {
+  background: rgba(192, 192, 192, 0.3);
+  transition: all 0.2s ease-out;
 }
 
 table {
-    border-spacing: 15px;
+  border-spacing: 15px;
 }
-
-.dycalender-month-container {
-    font-size: 35px;
+.dycalendar-month-container {
+  font-size: 35px;
 }
-
-.dycalender-prev-next-btn.next-btn,
+.dycalendar-prev-next-btn.next-btn,
 .prev-btn {
-    padding: 10px, 25px;
-    background: none;
-    color: #000;
-    border-radius: 10px;
-    margin-top: -10px;
-    margin-left: 10px;
+  padding: 10px 25px;
+  background: none;
+  color: black;
+  border-radius: 10px;
+  margin-top: -10px;
+  margin-left: 10px;
 }
 
-.dycalender .next-btn {
-    margin-right: 10px;
+.dycalendar .next-btn {
+  margin-right: 10px;
 }
 
-.dycalender-prev-next-btn.next-btn:hover {
-    background: #f5f5f5;
+.dycalendar-prev-next-btn.next-btn:hover {
+  background: #f5f5f5;
+}
+.dycalendar-prev-next-btn.prev-btn:hover {
+  background: #f5f5f5;
 }
 
-.dycalender-prev-next-btn.next-btn:hover {
-    background: #f5f5f5;
+.dycalendar .dycalendar-today-date {
+  background: none;
+  background: #5e94eb;
+  border-radius: 10px;
+  color: white;
 }
 
-.dycalender .dycalender-today-date {
-    background: none;
-    background-color: #5e94eb;
-    border-radius: 10px;
-    color: #fff;
-
+.dycalendar .dycalendar-today-date:hover {
+  background: #4fa2f5;
 }
 
-.dycalender .dycalender-today-date:hober {
-    background: #4fa2f5;
-}
-
-.dycalender-header {
-    position: relative;
-    top: 25px;
-    font-family: 'padding' sans-serif;
+.dycalendar-header {
+  position: relative;
+  top: 25px;
+  font-family: "Pretendard Variable", sans-serif;
 }
 
 .toggle-btn {
-    padding: 15px;
-    border-radius: #fff;
-    position: relative;
-    top: -80px;
-    left: 440px;
-    width: 40px;
-    cursor: pointer;
-    border: 2px solid grey;
-
+  padding: 15px;
+  border-radius: 30px;
+  background: white;
+  position: relative;
+  top: -80px;
+  left: 440px;
+  width: 80px;
+  cursor: pointer;
+  border: 2px solid grey;
 }
 
-.circle{
-    height:50px;
-    width: 50px;
-    background: #fff;
+.circle {
+  height: 50px;
+  width: 50px;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+}
+
+.circle:before {
+  content: "\f186";
+  font-family: fontAwesome;
+  font-size: 30px;
+  color: black;
+}
+
+.container.dark .toggle-btn {
+  background: #29292b;
+  border: 1px solid white;
+  transition: all 0.2s ease;
+}
+.container.dark .toggle-btn .circle {
+  left: 40px;
+  background: #29292b;
+  border: 1px solid white;
+}
+body.background-dark {
+  background: #181818;
+}
+.container.dark .dycalendar {
+  background: #29292b;
+  color: white;
+}
+
+.container.dark .dycalendar table td:hover {
+  background: rgba(248, 248, 255, 0.1);
+}
+
+.container.dark .dycalendar-prev-next-btn.next-btn {
+  color: white;
+}
+
+.container.dark .dycalendar-prev-next-btn.prev-btn {
+  color: white;
+}
+
+.container.dark .dycalendar-prev-next-btn.next-btn:hover {
+  background: rgba(248, 248, 255, 0.1);
+}
+.container.dark .dycalendar-prev-next-btn.prev-btn:hover {
+  background: rgba(248, 248, 255, 0.1);
+}
+
+.container.dark .dycalendar .dycalendar-today-date:hover {
+  background: #5e94eb;
+}
+.container.dark .circle:before {
+  content: "\f185";
+  font-family: fontAwesome;
+  font-size: 30px;
+  color: white;
 }

@@ -1,16 +1,17 @@
+/*codingmaker_*/
 let container = document.querySelector(".container");
-let toggleBtn = document.querySelector("toggle-btn");
+let toggleBtn = document.querySelector(".toggle-btn");
 
-dycalender.draw({
+dycalendar.draw({
   target: "#dycalendar",
   dayformat: "full",
   type: "month",
   monthformat: "full",
   highlighttoday: true,
-  prevenxtbutton: "show",
+  prevnextbutton: "show",
 });
 
 toggleBtn.onclick = () => {
-  container.classList / toggle("dark");
+  container.classList.toggle("dark");
   document.body.classList.toggle("background-dark");
 };
