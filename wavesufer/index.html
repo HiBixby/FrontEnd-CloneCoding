@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>WaveSurfer Media player</title>
+    <link rel="stylesheet" href="./media.css" />
+  </head>
+  <body>
+    <section>
+      <div class="player">
+        <div class="thumb">
+          <img src="./Parallax.png" alt="album image" />
+        </div>
+        <div class="info">
+          <div class="detail">
+            <div class="title">
+              TheFatRat - Upwind
+              <div class="time">
+                <span id="current">0:00</span>
+                <span id="duration">0:00</span>
+              </div>
+            </div>
+            <div class="control">
+              <i class="fi-rr-play"></i>
+            </div>
+          </div>
+          <div id="wave"></div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="./media.js"></script>
+  </body>
+</html>
